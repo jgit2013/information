@@ -1,0 +1,10 @@
+1. 執行以下四個指令：
+$ cd /home/j/workspace
+$ oil create project_name
+$ cd /var/www
+$ ln -s /home/j/workspace/project_name project_name
+
+2. 使用Firefox測試是否成功
+http://localhost/project_name/public/index.php/welcome/index
+
+3. 執行eclipse，並建立新的PHP Project，且在Project name的部分輸入上述的project_name，點選Finsh即可

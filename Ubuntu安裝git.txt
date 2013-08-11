@@ -1,0 +1,8 @@
+1. 先安裝git所需要的函式庫：curl、zlib、openssl、expat及libiconv：
+$ sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev
+
+2. 接著使用二進位安裝程式安裝git：
+$ sudo apt-get install git
+
+3. 使用git取得git的更新版：
+$ git clone git://git.kernel.org/pub/scm/git/git.git

@@ -1,0 +1,37 @@
+1. 安裝Apache + MySQL + PHP + phpmyadmin (安裝檔：xampp-win32-1.8.3-beta1-VC11-installer.exe)
+2. 安裝composer (安裝檔：Composer-Setup.exe，下載網址：https://getcomposer.org/Composer-Setup.exe)
+3. 找尋Web的DocumentRoot (例：D:\Program Files\xampp-1.8.3\htdocs)
+4. 在Web的DocumentRoot下建立一個新的PHP Project (例：D:\Program Files\xampp-1.8.3\htdocs\test)
+5. 下載FuelPHP (檔名：fuelphp-1.6.1.zip)
+6. 將FuelPHP中的所有檔案與資料夾 (例：docs, fuel, public, composer.json, ...) 複製到4. 所建立的PHP Project底下
+7. 開啟eclipse並選擇3. 中Web的DocumentRoot作為workspace，安裝PDT後，接著建立一個新的PHP Project，
+   並將Project name命名為與4. 所建立的PHP Project一樣的名字(在這裡是test)接著按Finish，然後就可以在eclipse看到
+   test project裡的內容為剛剛複製到它底下的FuelPHP的內容
+8. 開啟cmd並cd到4. 所在的PHP Project目錄下，用ls指令可看到composer.phar還有一些其它檔案，
+   接著使用指令php composer.phar update更新composer，其執行結果如下
+
+   D:\Program Files\xampp-1.8.3\htdocs\test>ls
+   CHANGELOG.md     README.md   composer.json  composer.phar  fuel  public
+   CONTRIBUTING.md  TESTING.md  composer.lock  docs           oil
+
+   D:\Program Files\xampp-1.8.3\htdocs\test>php composer.phar update
+   Loading composer repositories with package information
+   Updating dependencies (including require-dev)
+     - Installing psr/log (1.0.0)
+       Downloading: 100%
+
+     - Installing monolog/monolog (1.5.0)
+       Downloading: 100%
+
+     - Installing fuelphp/upload (2.0)
+       Downloading: 100%
+
+   monolog/monolog suggests installing mlehner/gelf-php (Allow sending log messages to a GrayLog2 server)
+   monolog/monolog suggests installing raven/raven (Allow sending log messages to a Sentry server)
+   monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+   monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+   monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+   Writing lock file
+   Generating autoload files
+
+9. 啟動Apache Server並在網址列輸入http://localhost/test/public/index.php/welcome就可看到FuelPHP的歡迎頁面了

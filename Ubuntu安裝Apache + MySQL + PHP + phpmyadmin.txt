@@ -1,0 +1,32 @@
+安裝MySQL-Server
+$ sudo apt-get install mysql-server
+
+安裝Apache HTTP Server
+$ sudo apt-get install apache2
+
+安裝PHP for Apache HTTP Server
+$ sudo apt-get install php5
+
+安裝MySQL for Apache HTTP Server
+$ sudo apt-get install libapache2-mod-auth-mysql
+$ sudo apt-get install php5-mysql
+
+安裝phpmyadmin
+$ sudo apt-get install phpmyadmin
+
+進入phpmyadmin的方法為先執行以下指令，再到Firefox輸入http://localhost/phpmyadmin即可
+$ sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin
+
+相關路徑及指令：
+1、Apache2
+　1) 設定檔路徑 /etc/apache2
+　2) 開啟/關閉伺服器 /etc/init.d/apache2 start 或 /etc/init.d/apache2 stop
+　3) 預設根目錄 /var/www
+　4) Log 預設路徑 /var/log/apache2/
+2、MySQL
+　1) 使用指令登入資料庫 mysql -u xxxxx -p
+　2) 資料庫設定檔 /etc/mysql/my.cnf
+　3) 開啟/關閉資料庫 sudo /etc/init.d/mysql start 或 sudo /etc/init.d/mysql stop
+3、phpMyAdmin
+　1) 預設目錄 /etc/phpmyadmin
+　2) 預設設定檔位置 /etc/phpmyadmin/config.inc.php
